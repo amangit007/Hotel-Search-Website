@@ -5,7 +5,6 @@ CREATE TABLE users (
   full_name VARCHAR(100) NOT NULL,
   phone VARCHAR(20) NOT NULL,
   gender ENUM('male', 'female') NOT NULL,
-  college_name VARCHAR(100) NOT NULL,
   PRIMARY KEY(id)
 );
 
@@ -21,7 +20,6 @@ CREATE TABLE properties (
   name VARCHAR(100) NOT NULL,
   address VARCHAR(255) NOT NULL,
   description LONGTEXT NOT NULL,
-  gender ENUM('male', 'female', 'unisex') NOT NULL,
   rent INT NOT NULL,
   rating_clean FLOAT(2,1) NOT NULL,
   rating_food FLOAT(2,1) NOT NULL,
