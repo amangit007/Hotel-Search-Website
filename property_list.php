@@ -70,20 +70,8 @@ $interested_users_properties = mysqli_fetch_all($result_3, MYSQLI_ASSOC);
     </nav>
 
     <div class="page-container">
-        <div class="filter-bar row justify-content-around">
-            <div class="col-auto" data-toggle="modal" data-target="#filter-modal">
-                <img src="img/filter.png" alt="filter" />
-                <span>Filter</span>
-            </div>
-            <div class="col-auto">
-                <img src="img/desc.png" alt="sort-desc" />
-                <span>Highest rent first</span>
-            </div>
-            <div class="col-auto">
-                <img src="img/asc.png" alt="sort-asc" />
-                <span>Lowest rent first</span>
-            </div>
-        </div>
+       <div style="text-align:center" class="mb-5"> <h2>Hotels in <?php echo $city_name; ?></h2>
+       </div>
 
         <?php
         foreach ($properties as $property) {
@@ -119,60 +107,17 @@ $interested_users_properties = mysqli_fetch_all($result_3, MYSQLI_ASSOC);
                             }
                             ?>
                         </div>
-                        <div class="interested-container">
-                            <?php
-                            $interested_users_count = 0;
-                            $is_interested = false;
-                            foreach ($interested_users_properties as $interested_user_property) {
-                                if ($interested_user_property['property_id'] == $property['id']) {
-                                    $interested_users_count++;
-
-                                    if ($interested_user_property['user_id'] == $user_id) {
-                                        $is_interested = true;
-                                    }
-                                }
-                            }
-
-                            if ($is_interested) {
-                            ?>
-                                <i class="is-interested-image fas fa-heart" property_id="<?= $property['id'] ?>"></i>
-                            <?php
-                            } else {
-                            ?>
-                                <i class="is-interested-image far fa-heart" property_id="<?= $property['id'] ?>"></i>
-                            <?php
-                            }
-                            ?>
-                            <div class="interested-text">
-                                <span class="interested-user-count"><?= $interested_users_count ?></span> interested
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class="detail-container">
                         <div class="property-name"><?= $property['name'] ?></div>
                         <div class="property-address"><?= $property['address'] ?></div>
-                        <div class="property-gender">
-                            <?php
-                            if ($property['gender'] == "male") {
-                            ?>
-                                <img src="img/male.png" />
-                            <?php
-                            } elseif ($property['gender'] == "female") {
-                            ?>
-                                <img src="img/female.png" />
-                            <?php
-                            } else {
-                            ?>
-                                <img src="img/unisex.png" />
-                            <?php
-                            }
-                            ?>
-                        </div>
+                        
                     </div>
                     <div class="row no-gutters">
                         <div class="rent-container col-6">
                             <div class="rent">₹ <?= number_format($property['rent']) ?>/-</div>
-                            <div class="rent-unit">Night</div>
+                            <div class="rent-unit">per night</div>
                         </div>
                         <div class="button-container col-6">
                             <a href="property_detail.php?property_id=<?= $property['id'] ?>" class="btn btn-primary">View</a>

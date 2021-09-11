@@ -14,7 +14,7 @@
                 <a href="property_list.php?city=Hyderabad">Hyderabad</a>
             </div>
         </div>
-        <div class="footer-copyright">© 2020 Copyright PG Life </div>
+        <div class="footer-copyright">© 2021 Copyright Pro hotels </div>
     </div>
 </div>
 

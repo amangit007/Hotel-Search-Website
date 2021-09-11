@@ -142,55 +142,17 @@ $interested_users_count = mysqli_num_rows($result_4);
                 }
                 ?>
             </div>
-            <div class="interested-container">
-                <?php
-                $is_interested = false;
-                foreach ($interested_users as $interested_user) {
-                    if ($interested_user['user_id'] == $user_id) {
-                        $is_interested = true;
-                    }
-                }
-
-                if ($is_interested) {
-                ?>
-                    <i class="is-interested-image fas fa-heart"></i>
-                <?php
-                } else {
-                ?>
-                    <i class="is-interested-image far fa-heart"></i>
-                <?php
-                }
-                ?>
-                <div class="interested-text">
-                    <span class="interested-user-count"><?= $interested_users_count ?></span> interested
-                </div>
-            </div>
+            
         </div>
         <div class="detail-container">
             <div class="property-name"><?= $property['property_name'] ?></div>
             <div class="property-address"><?= $property['address'] ?></div>
-            <div class="property-gender">
-                <?php
-                if ($property['gender'] == "male") {
-                ?>
-                    <img src="img/male.png">
-                <?php
-                } elseif ($property['gender'] == "female") {
-                ?>
-                    <img src="img/female.png">
-                <?php
-                } else {
-                ?>
-                    <img src="img/unisex.png">
-                <?php
-                }
-                ?>
-            </div>
+            
         </div>
         <div class="row no-gutters">
             <div class="rent-container col-6">
                 <div class="rent">₹ <?= number_format($property['rent']) ?>/-</div>
-                <div class="rent-unit">per month</div>
+                <div class="rent-unit">per night</div>
             </div>
             <div class="button-container col-6">
                 <a href="#" class="btn btn-primary">Book Now</a>

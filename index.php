@@ -8,6 +8,7 @@ session_start();
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome | Pro Hotels</title>
+    
 
     <?php
     include "includes/head_links.php";
