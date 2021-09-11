@@ -56,11 +56,4 @@ CREATE TABLE testimonials (
   FOREIGN KEY(property_id) REFERENCES properties(id)
 );
 
-CREATE TABLE interested_users_properties (
-  id INT NOT NULL AUTO_INCREMENT,
-  user_id INT NOT NULL,
-  property_id INT NOT NULL,
-  PRIMARY KEY(id),
-  FOREIGN KEY(user_id) REFERENCES users(id),
-  FOREIGN KEY(property_id) REFERENCES properties(id)
-);
+
