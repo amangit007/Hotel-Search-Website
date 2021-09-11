@@ -1,7 +1,7 @@
 # Hotel-Search-Website
 LIVE ON: http://prohotels.rf.gd/
 
-\n With this website people can :
+With this website people can :
 1. Create Account
 2. Search hotel by city
 3. View hotel info
